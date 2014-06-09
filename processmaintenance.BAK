@@ -1,0 +1,35 @@
+*-------------------------------------------------------
+* PROCESO DE MANTENIMIENTO DE BASE DE DATOS:
+*-------------------------------------------------------
+* Este módulo hace una serie de procesos de limpieza y mantenimiento a la base
+* de datos del plantel (no afecta a las bases de datos de las coordinaciones ni
+* la base de datos de oficinas generales, siguiendo la política de que en dichas
+* bases de datos debe reflejarse exactamente lo que hay en el plantel ya sea que 
+* allí esté mal o bien no importa, lo que importa es que esté exactamente igual.)
+* Esto funciona como la integridad de la información, pero la diferencia es que este
+* proceso se corre automático cada vez que se inicia el sistema, también justo antes
+* de enviar un respaldo y también antes de imrpimir actas ordinarias o extraordinarias.
+*-----------------------------------------------------
+WWM1=CHR(13)+"Porfavor espere un momento a que se realicen"+CHR(13)
+WWM2="los procesos de mantenimiento a la base de datos."
+WAIT WINDOW WWM1+WWM2 AT 20,50 NOWAIT NOCLEAR
+
+SET DEFAULT TO \Escolar\Scripts\maintenance_2014A\
+
+* ------------------------------------------------------------
+* CORREGIR ESTATUS DE ALUMNOS.
+* ------------------------------------------------------------
+* CORREGIR EL SEMESTRE DE LOS ALUMNOS EN TABLA alumnos.
+  SQLEXEC(lnhandle, FILETOSTR("fixTbl_alumnos_semestres.sql"))
+* CORREGIR ESTATUS EN LA TABLA alumnos.
+  SQLEXEC(lnhandle, FILETOSTR("fixTbl_alumnos_estatus.sql"))
+* CORREGIR CICLO-GENERACIÓN EN LA TABLA alumnos.
+  SQLEXEC(lnhandle, FILETOSTR("fixTbl_alumnos_cicloGene.sql"))
+* CORREGIR FECHAS DE BAJAS EN LA TABLA alumnos.
+  SQLEXEC(lnhandle, FILETOSTR("fixTbl_alumnos_fecbaj.sql"))
+* CORREGIR CAPACITACIONES EN TABLA alumnos.
+  SQLEXEC(lnhandle, FILETOSTR("fixTbl_alumnos_capac.sql"))
+* CORREGIR TIPO DE MODALIDAD EN TABLA alumnos.
+  SQLEXEC(lnhandle, FILETOSTR("fixTbl_alumnos_tipModal.sql"))
+
+WAIT CLEAR

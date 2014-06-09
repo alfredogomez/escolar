@@ -1,0 +1,8 @@
+open ftp.cobaesenlinea.com
+victormanriquez@cobaesenlinea.com
+FTPApplet.jar
+lcd C:\
+cd EscolarSistema
+quote pasv
+ls * C:\Escolar\cmdFiles\ftpVersion.txt
+quit

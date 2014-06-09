@@ -1,0 +1,6 @@
+INSERT INTO calendarAsueto ( cla_ciclo, cla_fecasueto ) 
+VALUES ('0000B', '1609')
+INSERT INTO calendarAsueto ( cla_ciclo, cla_fecasueto ) 
+VALUES ('0000B', '0211')
+INSERT INTO calendarAsueto ( cla_ciclo, cla_fecasueto ) 
+VALUES ('0000B', '2011')

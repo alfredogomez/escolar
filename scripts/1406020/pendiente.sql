@@ -1,0 +1,33 @@
+--delete from PL095..extraord
+--where ex_folacta = '0'
+
+--delete from PL037..ordinar
+--where or_asigna = '0'
+
+--
+--declare @grupo AS VARCHAR(3)
+--declare @tipext AS INT
+--declare @matric AS varchar(10)
+--declare @asigna as varchar(4)
+--declare @ciclo as varchar(5)
+--declare alumno cursor for
+--  select ex_grupo, ex_tipext, ex_matric, ex_asigna, ex_ciclo
+--  from pl051..extraord
+--  group by ex_zona, ex_plant, ex_grupo, ex_turno, ex_tipext, ex_matric, ex_asigna, ex_semest, ex_ciclo
+--  having count(*)>1
+--  order by ex_matric
+--open alumno
+--FETCH NEXT FROM alumno INTO @grupo, @tipext, @matric, @asigna, @ciclo
+--WHILE @@FETCH_STATUS = 0
+--BEGIN
+--  delete from PL051..extraord
+--  where ex_matric = @matric
+--  and ex_asigna = @asigna
+--  and ex_ciclo = @ciclo
+--  and ex_grupo = @grupo
+--  and ex_tipext = @tipext
+--  and CAST(PL051..extraord.ex_califi AS INT) < 6
+--  FETCH NEXT FROM alumno INTO @grupo, @tipext, @matric, @asigna, @ciclo
+--END
+--CLOSE alumno
+--DEALLOCATE alumno

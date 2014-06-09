@@ -1,0 +1,13 @@
+Agregar tabla calendario
+Agregar tabla calendarioAsueto
+
+Fixes:
+  Sólo alumnos con estatus = '3' deben tener fecha de baja
+  Todos los alumnos con estatus <> '3' deben NO tener fecha de baja
+  Alumnos en planteles tradicionales con al_tipModal = '1'
+  Alumnos en planteles emsad con al_tipModal = '2'
+  Alumnos de generaciones anteriores estatus = '8' deben tener al_tipModal = '0'
+  Alumnos que tengan cargadas asignaturas de un semestre es específico para el 2014A deben tener ese semestre en al_semes de tabla alumnos.
+
+CORRER EL PROCESO DE MARCAR COMO EGRESADOS....
+

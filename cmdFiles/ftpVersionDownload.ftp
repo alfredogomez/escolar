@@ -1,0 +1,9 @@
+open ftp.cobaesenlinea.com
+victormanriquez@cobaesenlinea.com
+FTPApplet.jar
+lcd C:\
+cd Zona5/SysEscolar
+binary
+prompt
+get Escolar_1404031.rar
+quit

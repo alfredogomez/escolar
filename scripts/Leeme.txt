@@ -1,0 +1,16 @@
+Para que empiecen a funcionar las opciones de preinscripciones 
+es necesario primero crear las Tablas.
+
+ahi esta un script preinscr.sql que se ejecuta entrando al query analizer
+y se le da Open estando en la b.d. escolar...
+
+se ejecuta(presionando la flecha verde) y creara las tablas de preinscripciones...
+
+Preinscrip
+PreinsPad
+
+Despues de este proceso se debera ENTRAR AL SISTEMA Y EN LA OPCION DE INTEGRIDAD 
+esta opcion pasara todas las preinscripciones de los datos de ALUMNOS y PADRES a 
+los archivos de Preinscripciones...
+
+Cualquier duda.Estamos para ser bilis.
