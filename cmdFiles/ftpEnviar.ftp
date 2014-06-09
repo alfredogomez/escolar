@@ -6,6 +6,6 @@ cd Zona4
 binary
 prompt
 quote pasv
-mdelete P031*.RAR
+mdelete P031*.rar
 put P031E20614*.RAR
 quit
